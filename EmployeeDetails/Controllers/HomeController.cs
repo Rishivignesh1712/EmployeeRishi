@@ -24,6 +24,7 @@ namespace EmployeeDetails.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult Search(int inputSalary)
         {
             var filteredEmployees = employees.FindAll(e => e.Salary > inputSalary);
